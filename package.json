@@ -1,0 +1,40 @@
+{
+  "name": "tvl-api",
+  "module": "index.ts",
+  "version": "1.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "node --enable-source-maps dist/index.mjs",
+    "build:esbuild": "tsx esbuild.ts",
+    "build:ts": "tsc",
+    "build": "npm run build:ts && npm run build:esbuild",
+    "dev:tsx": "tsx watch src/index.ts",
+    "migrate:01": "tsx ./migrations/01_map_wallet_address_to_user.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node-telegram-bot-api": "^0.64.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.12.2",
+    "@hono/zod-validator": "^0.2.2",
+    "@ton/core": "^0.58.1",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "^15.0.0",
+    "bignumber.js": "^9.1.2",
+    "dotenv": "^16.4.5",
+    "expiry-map": "^2.0.0",
+    "hono": "^4.5.11",
+    "p-memoize": "^7.1.1",
+    "tsx": "^4.19.0",
+    "undici": "^6.19.8",
+    "zod": "^3.23.8",
+    "zod-config": "^0.0.5"
+  },
+  "overrides": {
+    "@ton/ton": "^15.0.0"
+  }
+}

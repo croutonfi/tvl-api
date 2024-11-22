@@ -1,0 +1,12 @@
+######################################################################
+# This file is used to run the local environment with docker-compose #
+######################################################################
+
+version: "3"
+services:
+  redis:
+    image: bitnami/redis:7.2.0
+    ports:
+      - "6379:6379"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
