@@ -12,6 +12,9 @@ const schemaConfig = z.object({
 	TRITON_ADDRESS: z
 		.string()
 		.default("EQB7Orui1z_dKONoHuglvi2bMUpmD4fw0Z4C2gewD2FP0BpL"),
+
+	DONE_USDT_ADDRESS: z.string().default('EQBYyQyeg3n-6REJhKcky4mK5WpmbghRdpAsz-Bi5cJXUWWL'),
+	AQUAUSD_USDT_ADDRESS: z.string().default('EQB5osFH6kzBN2zK9f3A1LZGeJKmqcyGRumYhJgtuWlbjB8w'),
 });
 
 export const config = await loadConfig({

@@ -18,6 +18,14 @@ export const POOLS = [
 		name: "3TON",
 		address: config.TRITON_ADDRESS,
 	},
+	{
+		name: "AquaUSD/USDT",
+		address: config.AQUAUSD_USDT_ADDRESS,
+	},
+	{
+		name: "DONE/USDT",
+		address: config.DONE_USDT_ADDRESS,
+	}
 ];
 
 export const LP_METADATA = {
@@ -192,6 +200,27 @@ export const getJettonMetadata = async (jettonAddress: string) => {
 				decimals: 9,
 				logoURI:
 					"https://cache.tonapi.io/imgproxy/BBswWn_XyuF6aNntVmh-yXANFKQ_PkUpt30z-kotVvg/rs:fill:200:200:1/g:no/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL21pbGtjcmVlay90b2tlbnMvc3RUT04ucG5n.webp",
+			};
+		case "EQAWDyxARSl3ol2G1RMLMwepr3v6Ter5ls3jiAlheKshgg0K":
+			return {
+				name: "AquaUSD",
+				symbol: "AquaUSD",
+				decimals: 6,
+				logoURI: "https://cache.tonapi.io/imgproxy/ya8_uDrmedWuCUiYk6Tr5ZjkUSCmRCTsySyefHoFQQs/rs:fill:200:200:1/g:no/aHR0cHM6Ly9hcHAuYXF1YXByb3RvY29sLnh5ei9hc3NldHMvYXF1YXVzZC1pY29uLnBuZw.webp",
+			};
+		case "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs":
+			return {
+				name: "Tether USD",
+				symbol: "USDT",
+				decimals: 6,
+				logoURI: "https://cache.tonapi.io/imgproxy/T3PB4s7oprNVaJkwqbGg54nexKE0zzKhcrPv8jcWYzU/rs:fill:200:200:1/g:no/aHR0cHM6Ly90ZXRoZXIudG8vaW1hZ2VzL2xvZ29DaXJjbGUucG5n.webp",
+			};
+		case "EQCgGUMB_u1Gkrskw2o407Ig8ymQmfkxWuPW2d4INuQoPFJO":
+			return {
+				name: "D-ONE",
+				symbol: "DONE",
+				decimals: 9,
+				logoURI: "https://cache.tonapi.io/imgproxy/p0jkHDBb3CSRWmoiljIiHka-08W9Xbd8A6u2ng9GE64/rs:fill:200:200:1/g:no/aHR0cHM6Ly9jZG4uZGVsZWEuZmluYW5jZS9kb25lLnBuZw.webp",
 			};
 
 		default:
